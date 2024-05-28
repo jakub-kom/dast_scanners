@@ -1,0 +1,31 @@
+[~] Total: 67
+ [+] Without issues: 67
+ [-] With issues: 0 ( 0% )
+
+ [~] Report saved at: /home/kali/.scnr/reports/localhost_2024-03-07_09_17_19_-0500.ser [0.02MB]
+ [~] The scan has logged errors: /home/kali/Scanners/codename_scnr/scnr-20240109_160741/scnr-1.0dev/bin/../.system/../logs/engine/error-2209.log
+
+
+
+ [~] Audited 1391 page snapshots.
+ [~] Audit limited to a max of 0 pages.
+
+ [~] Duration: 01:20:38
+ [~] Processed 9070/352 HTTP requests -- failed: 0
+ [~] -- 33.429 requests/second.
+ [~] Processed 0/0 browser jobs -- failed: 0
+ [~] -- 0 second/job.
+
+ [~] Burst avg application time  0.251 seconds
+ [~] Burst average response time 0.251 seconds
+ [~] Burst average responses/s   0.163 responses/second
+
+ [~] Average application time    0.411 seconds
+ [~] Download speed              18595.495 KBps
+ [~] Upload speed                19.565 KBps
+ [~] Concurrency                 10/10 connections
+
+====================================================
+ [~] Please provide feedback at: contact@ecsypno.com
+ [~] -- Thank you in advance!
+====================================================

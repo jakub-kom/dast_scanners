@@ -1,0 +1,22 @@
+[~] Audited 124 page snapshots.
+ [~] Audit limited to a max of 0 pages.
+
+ [~] Duration: 00:00:59
+ [~] Processed 220/90 HTTP requests -- failed: 0
+ [~] -- 74.389 requests/second.
+ [~] Processed 0/0 browser jobs -- failed: 0
+ [~] -- 0 second/job.
+
+ [~] Burst avg application time  0.036 seconds
+ [~] Burst average response time 0.037 seconds
+ [~] Burst average responses/s   11.532 responses/second
+
+ [~] Average application time    0.031 seconds
+ [~] Download speed              535.843 KBps
+ [~] Upload speed                0.0 KBps
+ [~] Concurrency                 10/10 connections
+
+====================================================
+ [~] Please provide feedback at: contact@ecsypno.com
+ [~] -- Thank you in advance!
+====================================================

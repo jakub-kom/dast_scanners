@@ -1,0 +1,109 @@
+Information,Strange header,GET,http://localhost:3000/,,,|[130, 132, 133, 135, 20, 84, 89, 90, 92, 94, 375, 97, 99, 100, 102, 103, 104, 105, 108, 109, 367, 112, 113, 114, 370, 117, 119, 120, 122, 379]|,|The remote web server sent 30 HTTP responses with the uncommon response header "Feature-Policy", one of the received header values is "payment 'self'". The first ten URLs which sent the uncommon header are:
+ - http://localhost:3000/
+ - http://localhost:3000/103.js
+ - http://localhost:3000/MaterialIcons-Regular.woff2
+ - http://localhost:3000/api
+ - http://localhost:3000/api/Challenges
+ - http://localhost:3000/api/Challenges/
+ - http://localhost:3000/api/Quantitys
+ - http://localhost:3000/assets
+ - http://localhost:3000/assets/i18n
+ - http://localhost:3000/assets/i18n/en.json
+|
+Information,Strange header,GET,http://localhost:3000/,,,|[130, 132, 133, 135, 20, 84, 89, 90, 92, 94, 375, 97, 99, 100, 102, 103, 104, 105, 108, 109, 367, 112, 113, 114, 370, 117, 119, 120, 122, 379]|,|The remote web server sent 30 HTTP responses with the uncommon response header "X-Recruiting", one of the received header values is "/#/jobs". The first ten URLs which sent the uncommon header are:
+ - http://localhost:3000/
+ - http://localhost:3000/103.js
+ - http://localhost:3000/MaterialIcons-Regular.woff2
+ - http://localhost:3000/api
+ - http://localhost:3000/api/Challenges
+ - http://localhost:3000/api/Challenges/
+ - http://localhost:3000/api/Quantitys
+ - http://localhost:3000/assets
+ - http://localhost:3000/assets/i18n
+ - http://localhost:3000/assets/i18n/en.json
+|
+Information,Omitted server header,GET,,,,[23],The remote HTTP Server omitted the "server" header in its response. This information was found in the request with id 23.
+Information,DAV methods enabled,GET,http://localhost:3000/,,,|[24, 34, 35, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80]|,|The URL "http://localhost:3000/" has the following allowed methods. These include DAV methods and should be disabled: *, ACL, BASELINE_CONTROL, CHECKIN, CHECKOUT, COPY, DEBUG, GET, HEAD, INDEX, INVALID, INVOKE, LABEL, LINK, LOCK, MERGE, MKACTIVITY, MKCOL, MKDIR, MKWORKSPACE, MOVE, NOTIFY, OPTIONS, PATCH, PIN, POLL, POST, PROPFIND, PROPPATCH, REPLY, REPORT, RMDIR, SEARCH, SHOWMETHOD, SPACEJUMP, SUBSCRIBE, SUBSCRIPTIONS, TEXTSEARCH, TRACE, TRACK, UNCHECKOUT, UNLINK, UNLOCK, UNSUBSCRIBE, VERSION_CONTROL.  This information was found in the requests with ids 24, 34 to 35, 38 to 80.|
+Low,Path disclosure vulnerability,GET,http://localhost:3000/api,,,[90],The URL: "http://localhost:3000/api" has a path disclosure vulnerability which discloses "/home/kali/Scanners/juice-shop/build/routes/angular.js". This vulnerability was found in the request with id 90.
+Low,US Social Security Number disclosure,GET,http://localhost:3000/main.js,,,[109],The URL: "http://localhost:3000/main.js" possibly discloses US Social Security Number: "384-94-8954". This vulnerability was found in the request with id 109.
+Information,Strange HTTP response code,GET,http://localhost:3000/socket.io/,,,|[16073, 123, 19310, 22803, 2843, 23197]|,|The remote web server sent 1 HTTP responses with the uncommon response status code 400 using "Bad Request" as message. The first ten URLs which sent the uncommon status code are:
+ - http://localhost:3000/socket.io/
+|
+Low,US Social Security Number disclosure,GET,http://localhost:3000/vendor.js,,,[132],The URL: "http://localhost:3000/vendor.js" possibly discloses US Social Security Number: "606-17-1575". This vulnerability was found in the request with id 132.
+Information,Interesting META tag,GET,http://localhost:3000/ftp,,,[133],|The application sent a <meta> tag with the attribute value set to "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" which looks interesting and should be manually reviewed. The first ten URLs which sent the tag are:
+ - http://localhost:3000/ftp
+|
+Information,Strange header,GET,http://localhost:3000/socket.io/,,,|[390, 775, 656, 913, 787, 661, 536, 539, 421, 551, 685, 690, 567, 442, 955, 702, 448, 577, 706, 841, 842, 975, 725, 987, 605, 615, 361, 494, 501, 888]|,|The remote web server sent 1 HTTP responses with the uncommon response header "Upgrade", one of the received header values is "websocket". The first ten URLs which sent the uncommon header are:
+ - http://localhost:3000/socket.io/
+|
+Information,Strange HTTP response code,GET,http://localhost:3000/socket.io/,,,|[390, 775, 656, 913, 787, 661, 536, 539, 421, 551, 685, 690, 567, 442, 955, 702, 448, 577, 706, 841, 842, 975, 725, 987, 605, 615, 361, 494, 501, 888]|,|The remote web server sent 1 HTTP responses with the uncommon response status code 101 using "Switching Protocols" as message. The first ten URLs which sent the uncommon status code are:
+ - http://localhost:3000/socket.io/
+|
+Information,Strange header,GET,http://localhost:3000/socket.io/,,,|[390, 775, 656, 913, 787, 661, 536, 539, 421, 551, 685, 690, 567, 442, 955, 702, 448, 577, 706, 841, 842, 975, 725, 987, 605, 615, 361, 494, 501, 888]|,|The remote web server sent 1 HTTP responses with the uncommon response header "Sec-WebSocket-Accept", one of the received header values is "SF7fuDUA8FBJEyvtH6h2UfKg1As=". The first ten URLs which sent the uncommon header are:
+ - http://localhost:3000/socket.io/
+|
+Information,Authentication without www-authenticate header,GET,http://localhost:3000/rest/user/login,,,[2851],The resource: "http://localhost:3000/rest/user/login" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 2851.
+Information,DAV incorrect configuration,PUT,http://localhost:3000/api/rRVdO,,,[16063],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/api/rRVdO". This information was found in the request with id 16063.|
+Information,Authentication without www-authenticate header,GET,http://localhost:3000/api/Challenges/comGi,,,[16129],The resource: "http://localhost:3000/api/Challenges/comGi" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 16129.
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/OrLEb,,,[16412],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/OrLEb". This information was found in the request with id 16412.|
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/admin/hUKKf,,,[16421],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/admin/hUKKf". This information was found in the request with id 16421.|
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/products/EobsN,,,[16520],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/products/EobsN". This information was found in the request with id 16520.|
+High,SQL injection,GET,http://localhost:3000/rest/products/search?q=a%27b%22c%27d%22,q,,[16544],|SQL injection in a Unknown database was found at: "http://localhost:3000/rest/products/search", using HTTP method GET. The sent data was: "q=a%27b%22c%27d%22" The modified parameter was "q". This vulnerability was found in the request with id 16544.|
+Medium,ReDoS vulnerability,GET,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC,t,,|[18567, 18585, 18607, 18621]|,|ReDoS was found at: "http://localhost:3000/socket.io/", using HTTP method GET. The sent data was: "EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC" The modified parameter was "t". This vulnerability was found in the requests with ids 18567, 18585, 18607 and 18621.|
+Medium,ReDoS vulnerability,GET,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC,sid,,|[18539, 18579, 18611, 18628, 18635]|,|ReDoS was found at: "http://localhost:3000/socket.io/", using HTTP method GET. The sent data was: "EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC" The modified parameter was "sid". This vulnerability was found in the requests with ids 18539, 18579, 18611, 18628 and 18635.|
+Medium,ReDoS vulnerability,GET,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC,transport,,|[18525, 18570, 18617, 18622, 18646]|,|ReDoS was found at: "http://localhost:3000/socket.io/", using HTTP method GET. The sent data was: "EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC" The modified parameter was "transport". This vulnerability was found in the requests with ids 18525, 18570, 18617, 18622 and 18646.|
+Medium,ReDoS vulnerability,GET,http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC,EIO,,|[18527, 18532, 18537, 18578, 18614, 18630, 18649]|,|ReDoS was found at: "http://localhost:3000/socket.io/", using HTTP method GET. The sent data was: "EIO=4&transport=polling&t=OuGkIKY&sid=JV6W8RKK59u8FHYVAAAC" The modified parameter was "EIO". This vulnerability was found in the requests with ids 18527, 18532, 18537, 18578, 18614, 18630 and 18649.|
+High,Blind SQL injection vulnerability,GET,http://localhost:3000/rest/products/search?q=22%27%20AND%20%2722%27%3D%2723,q,,|[20158, 20295]|,|Blind SQL injection was found at: "b'http://localhost:3000/rest/products/search'", using HTTP method b'GET'. The injectable parameter is: "b'q'".  This vulnerability was found in the requests with ids 20158 and 20295.|
+Low,Path disclosure vulnerability,GET,http://localhost:3000/redirect,,,[22215],The URL: "http://localhost:3000/redirect" has a path disclosure vulnerability which discloses "/home/kali/Scanners/juice-shop/build/lib/insecurity.js". This vulnerability was found in the request with id 22215.
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/user/DmRyY,,,[65298],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/user/DmRyY". This information was found in the request with id 65298.|
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/captcha/bmeon,,,[65306],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/captcha/bmeon". This information was found in the request with id 65306.|
+Information,Authentication without www-authenticate header,GET,http://localhost:3000/api/Feedbacks/vOOQe,,,[65389],The resource: "http://localhost:3000/api/Feedbacks/vOOQe" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 65389.
+Information,Strange HTTP response code,GET,http://localhost:3000/ftp/SHSuH,,,[65441],|The remote web server sent 1 HTTP responses with the uncommon response status code 405 using "Method Not Allowed" as message. The first ten URLs which sent the uncommon status code are:
+ - http://localhost:3000/ftp/SHSuH
+|
+Information,DAV incorrect configuration,PUT,http://localhost:3000/rest/memories/NUhgZ,,,[65468],|DAV seems to be incorrectly configured. The web server answered with a 500 error code. In most cases, this means that the DAV extension failed in some way. This error was found at: "http://localhost:3000/rest/memories/NUhgZ". This information was found in the request with id 65468.|
+Information,Strange HTTP response code,GET,http://localhost:3000/redirect,,,|[66049, 66061, 66064, 66065, 66068, 66199, 66200, 66095, 66096, 66110, 66111, 66115, 66371, 66372, 66118, 66378, 66124, 66125, 66383, 66143, 66144, 66151, 66032, 66034, 66039, 66041]|,|The remote web server sent 1 HTTP responses with the uncommon response status code 406 using "Not Acceptable" as message. The first ten URLs which sent the uncommon status code are:
+ - http://localhost:3000/redirect
+|
+Low,Path disclosure vulnerability,GET,http://localhost:3000/redirect,,,[66032],The URL: "http://localhost:3000/redirect" has a path disclosure vulnerability which discloses "/home/kali/Scanners/juice-shop/build/routes/redirect.js". This vulnerability was found in the request with id 66032.
+Low,Path disclosure vulnerability,GET,http://localhost:3000/redirect,,,[66039],The URL: "http://localhost:3000/redirect" has a path disclosure vulnerability which discloses "/home/kali/Scanners/juice-shop/build/routes/redirect.js". This vulnerability was found in the request with id 66039.
+High,Blind SQL injection vulnerability,GET,http://localhost:3000/redirect?to=34%20OR%2034%2034%20OR%2034%2034,to,,|[66328, 66347]|,|Blind SQL injection was found at: "b'http://localhost:3000/redirect'", using HTTP method b'GET'. The injectable parameter is: "b'to'".  This vulnerability was found in the requests with ids 66328 and 66347.|
+Low,Unhandled error in web application,GET,http://localhost:3000/api/Challenges/?name=,name,,|[16065, 16187, 16233]|,|An unhandled error, which could potentially translate to a vulnerability, was found at: "http://localhost:3000/api/Challenges/", using HTTP method GET. The sent data was: "name=" The modified parameter was "name". This vulnerability was found in the requests with ids 16065, 16187 and 16233.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/api/rRVdO,,,[16058],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/api/rRVdO". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16058.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/api/,,,[16060],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/api/". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16060.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/,,,[16407],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16407.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/admin/,,,[16413],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/admin/". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16413.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/admin/hUKKf,,,[16416],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/admin/hUKKf". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16416.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/products/search?q=ed9yz%3Ced9yzed9yz--%3Eed9yzed9yz%2A%2Fed9yzed9yz%2A%2F%3A%28%22%27ed9yzed9yz%3Aed9yzed9yz%0Aed9yzed9yz%22ed9yzed9yz%27ed9yzed9yz%60ed9yzed9yz%20%3Ded9yz,,,[16459],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/products/search". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16459.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/products/EobsN,,,[16517],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/products/EobsN". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 16517.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/user/DmRyY,,,[65290],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/user/DmRyY". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 65290.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/captcha/bmeon,,,[65304],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/captcha/bmeon". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 65304.|
+Medium,Unhandled error in web application,GET,http://localhost:3000/rest/memories/NUhgZ,,,[65463],|An unidentified web application error (HTTP response code 500) was found at: "http://localhost:3000/rest/memories/NUhgZ". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w4af developers. This vulnerability was found in the request with id 65463.|
+Medium,Click-Jacking vulnerability,GET,,,,|[129, 351, 362, 389, 391, 395, 408, 426, 439, 441, 446, 449, 468, 484, 495, 502, 532, 535, 537, 540, 545, 552, 556, 568, 575]|,|Multiple application URLs have no protection against Click-Jacking attacks. Only the first 25 samples were captured as proof. The list of vulnerable URLs is:
+
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGkHrg
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlZ3h
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlZLS&sid=5f_rxp2p0KU-WMd9AAAF
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlb7Z
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlc8y&sid=Re-nNfDJbx5LKvZQAAAH
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlcUM&sid=Re-nNfDJbx5LKvZQAAAH
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGld-C
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGleiO&sid=bt2Ikw1-G_o9CwZ2AAAJ
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlgX_
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlgmP&sid=fjx5JNc7YYp6Uz8sAAAL
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGliD-
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGljCJ&sid=SkGCFnuDPQMFQopNAAAN
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlmB_
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlmto
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlnoD&sid=IDEJ4u5V47bd944UAAAQ
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGln5Q&sid=Wrf5OJ_3ct9WbgczAAAP
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlq7q
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlqFs&sid=D6BsQ9YEEIAHi7klAAAT
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlqRw
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlqVi&sid=m418o1AFhRVb78O_AAAV
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlrNc
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlrRA&sid=9DHdvynFxeJObZNxAAAX
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlrq3
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlsJu&sid=Nmwg28JjqJGdEbC7AAAZ
+ - http://localhost:3000/socket.io/?EIO=4&transport=polling&t=OuGlsko
+ This vulnerability was found in the requests with ids 129, 351, 362, 389, 391, 395, 408, 426, 439, 441, 446, 449, 468, 484, 495, 502, 532, 535, 537, 540, 545, 552, 556, 568 and 575.|

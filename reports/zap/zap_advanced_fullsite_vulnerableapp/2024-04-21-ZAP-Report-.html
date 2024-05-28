@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>All VulnerableApp Fullsite</title>
+
+<script src="2024-04-21-ZAP-Report-/Chart.min.js" type="text/javascript"></script>
+<script src="2024-04-21-ZAP-Report-/main.js"
+	type="text/javascript"></script>
+<link rel="stylesheet" href="2024-04-21-ZAP-Report-/Chart.min.css">
+<!-- CSS only -->
+
+<link rel="stylesheet" href="2024-04-21-ZAP-Report-/main.css">
+<link rel="stylesheet" href="2024-04-21-ZAP-Report-/bootstrap.min.css">
+<link rel="stylesheet" href="2024-04-21-ZAP-Report-/normalize.css">
+
+</head>
+<body>
+	<!-- Header material for report template -->
+	<div class="container">
+		<div class="row"></div>
+		<div class="row">
+			<div class="mx-auto" style="width: 50%;">
+				
+					<h1>
+						<!-- The ZAP Logo -->
+						<img src="2024-04-21-ZAP-Report-/zap32x32.png" alt="">
+						<th>All VulnerableApp Fullsite</th>
+					</h1>
+				
+			</div>
+		</div>
+		<div class="row"></div>
+		<div class="row">
+			<em
+				class="text-right">Generated on Sun, 21 Apr 2024 11:51:56</em> <em
+				class="text-right">ZAP Version: 2.14.0</em> <em> ZAP is supported
+				by the <a href="https://crashoverride.com/?zap=rep">Crash
+					Override Open Source Fellowship</a>
+			</em>
+		</div>
+	</div>
+	<p></p>
+
+	<!-- Description, and first row of charts-->
+	<div class="container ">
+		
+
+
+
+			<div class="row">
+				<div class="col-md-2 col-lg-2 col-sm-3 col-xs-12">
+					<div class="row">
+						<p></p>
+					</div>
+					<div class="row border-bottom">
+						<b>Most Severe Alert</b> <br>   <span
+							class="risk-1">Low</span> 
+					</div>
+
+				</div>
+
+
+				
+					<th>
+						<div class="col-md-5 col-lg-5 col-sm-9 col-xs-12 piChartWrapper">
+							<canvas class="styled_canvas" id="summaryChart" width="100%"
+								height="100%"></canvas>
+						</div>
+					</th>
+				
+
+				<script type="text/javascript">
+                    /*<![CDATA[*/
+                    var title = "Vulnerability Severity";
+                    var labels = [
+                    "High",
+                    "Medium",
+                    "Low",
+                    "Informational"];
+                    var data = [
+                    null,
+                    null,
+                    2,
+                    null];
+                    /*]]>*/
+
+                    renderSummaryChart(title, labels, data);
+                </script>
+
+				
+
+
+					
+
+				
+
+			</div>
+		
+
+	</div>
+	<p></p>
+	<div class="container left_right_borders">
+		<div class="row">
+
+			<div class="col-md-2 col-lg-3 col-sm-6 col-xs-12">
+				<div class="row">
+					<p></p>
+				</div>
+				<div class="row border-bottom">
+					<b>Most Common Bug</b><br>
+					<span id="common_bug"></span>
+				</div>
+				<div class="row"></div>
+			</div>
+
+			
+				<div
+					class="col-md-10 col-lg-9 col-sm-12 col-xs-12 horizontalBarChartWrapper">
+					<canvas class="styled_canvas" id="summaryChartBugs" width="100%"
+						height="50%"></canvas>
+				</div>
+			
+			<script type="text/javascript">
+                initializeSummaryBugsChartRender();
+            </script>
+			<script type="text/javascript">
+                    /*<![CDATA[*/
+                    bugs_count = 3;
+                    bugs_label = "Server Leaks Version Information via \"Server\" HTTP Response Header Field";
+                    risk = "Low";
+                    bugs_color = ""
+                    if (risk === "High") {
+                        bugs_color = "red";
+                    } else if (risk === "Medium") {
+                        bugs_color = "orange";
+                    } else if (risk === "Low") {
+                        bugs_color = "yellow";
+                    } else {
+                        bugs_color = "blue";
+                    }
+                    if (bugs_count > highest_count) {
+                        highest_count = bugs_count;
+                        most_common_bug = bugs_label;
+                        most_common_bug_color = bugs_color;
+                        document.getElementById('common_bug').innerText = most_common_bug
+                                + ' (' + bugs_count + ')';
+                    }
+                    all_bugs_count.push(bugs_count)
+                    all_colors.push(bugs_color)
+                    all_labels.push(bugs_label)
+                    /*]]>*/
+                </script><script type="text/javascript">
+                    /*<![CDATA[*/
+                    bugs_count = 2;
+                    bugs_label = "X-Content-Type-Options Header Missing";
+                    risk = "Low";
+                    bugs_color = ""
+                    if (risk === "High") {
+                        bugs_color = "red";
+                    } else if (risk === "Medium") {
+                        bugs_color = "orange";
+                    } else if (risk === "Low") {
+                        bugs_color = "yellow";
+                    } else {
+                        bugs_color = "blue";
+                    }
+                    if (bugs_count > highest_count) {
+                        highest_count = bugs_count;
+                        most_common_bug = bugs_label;
+                        most_common_bug_color = bugs_color;
+                        document.getElementById('common_bug').innerText = most_common_bug
+                                + ' (' + bugs_count + ')';
+                    }
+                    all_bugs_count.push(bugs_count)
+                    all_colors.push(bugs_color)
+                    all_labels.push(bugs_label)
+                    /*]]>*/
+                </script>
+			<script type="text/javascript">
+                title = "Count of Vulnerability Occurrences";
+                class_of_most_common_bug = ''
+                if (most_common_bug_color === 'red')
+                    new_class = 'risk-3'
+                else if (most_common_bug_color === 'orange')
+                    new_class = 'risk-2'
+                else if (most_common_bug_color === 'yellow')
+                    new_class = 'risk-1'
+                else if (most_common_bug_color === 'blue')
+                    new_class = 'risk-0'
+                document.getElementById('common_bug').classList.add(new_class);
+                renderSummaryBugsChart(title, all_labels, all_bugs_count,
+                        all_colors);
+            </script>
+			<p></p>
+		</div>
+	</div>
+	<p></p>
+
+	<div class="container">
+
+		
+			<div class="row">
+
+				<h3>Vulnerability Impact</h3>
+				<table class="alerts table table-hover table-bordered table-striped">
+					<caption>
+						<div>Vulnerability Descriptions</div>
+					</caption>
+					<tr>
+						<th width="5%" align="center" scope="col">#</th>
+						<th width="20%" align="center" scope="col">Name</th>
+						<th width="75%" align="center" scope="col">Impact</th>
+					</tr>
+					
+						
+							<tr>
+
+								
+								
+									<td class="risk-1"><span>1</span>
+									</td>
+								
+								
+								
+
+								<td><span>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</span> <span>
+										<a title="Reference 1: https://httpd.apache.org/docs/current/mod/core.html#servertokens"
+										href="https://httpd.apache.org/docs/current/mod/core.html#servertokens">[1]</a>
+								</span><span>
+										<a title="Reference 2: https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)"
+										href="https://learn.microsoft.com/en-us/previous-versions/msp-n-p/ff648552(v=pandp.10)">[2]</a>
+								</span><span>
+										<a title="Reference 3: https://www.troyhunt.com/shhh-dont-let-your-response-headers/"
+										href="https://www.troyhunt.com/shhh-dont-let-your-response-headers/">[3]</a>
+								</span></td>
+								<td><span>
+										<div>The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</div>
+								</span></td>
+							</tr>
+						
+							<tr>
+
+								
+								
+									<td class="risk-1"><span>2</span>
+									</td>
+								
+								
+								
+
+								<td><span>X-Content-Type-Options Header Missing</span> <span>
+										<a title="Reference 1: https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)"
+										href="https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)">[1]</a>
+								</span><span>
+										<a title="Reference 2: https://owasp.org/www-community/Security_Headers"
+										href="https://owasp.org/www-community/Security_Headers">[2]</a>
+								</span></td>
+								<td><span>
+										<div>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</div>
+								</span></td>
+							</tr>
+						
+					
+				</table>
+				<div class="spacer-lg"></div>
+			</div>
+		
+	</div>
+
+	<!-- JavaScript Bundle with Popper -->
+	<script src="2024-04-21-ZAP-Report-/bootstrap.bundle.min.js" type="text/javascript"></script>
+	<script src="2024-04-21-ZAP-Report-/main.js"
+		type="text/javascript"></script>
+</body>
+</html>
+

@@ -1,0 +1,3168 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        http://localhost/ ::
+      SCNR::Engine Web Application Security Report
+    </title>
+
+    <!--
+        Copyright 2023 Ecsypno Single Member P.C. <http://ecsypno.com>
+     -->
+
+    
+        <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/d3.min.js"></script>
+    
+        <script type="text/javascript" src="js/lib/c3.min.js"></script>
+    
+        <script type="text/javascript" src="js/helpers.js"></script>
+    
+        <script type="text/javascript" src="js/init.js"></script>
+    
+        <script type="text/javascript" src="js/charts.js"></script>
+    
+        <script type="text/javascript" src="js/configuration.js"></script>
+    
+
+    
+        <link href="css/lib/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/lib/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/lib/c3.css" type="text/css" rel="stylesheet" />
+    
+        <link href="css/main.css" type="text/css" rel="stylesheet" />
+    
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-default" role="navigation">
+    <div class="container">
+        <a class="navbar-brand" href="https://ecsypno.com">
+          Codename SCNR Engine v1.0dev
+        </a>
+
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#!/summary">
+                        Summary
+
+                        
+                    </a>
+
+                    
+                </li>
+
+                
+
+                
+                <li class="dropdown">
+                    <a href="#!/plugins">
+                        Plugin results
+
+                        <span class="badge">1</span>
+                        <b class="fa fa-caret-down"></b>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        
+                            <li>
+                                <a href="#!/plugins/healthmap">
+                                    Health map
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </li>
+                
+
+                <li>
+                    <a href="#!/sitemap">
+                        Sitemap
+
+                        <span class="badge">124</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#!/configuration">Configuration</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>
+            http://localhost/
+            <small>Generated on 2024-03-21 07:36:08 -0400</small>
+        </h1>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane active" id="summary">
+            <h2>Summary</h2>
+
+<div id="summary-tabs">
+    
+        <p class="alert alert-info">
+            No issues have been identified.
+        </p>
+    
+</div>
+
+        </div>
+
+        <div class="tab-pane" id="configuration">
+            <h2>
+    Configuration
+
+    <a id="configuration-download" class="btn btn-sm btn-primary">
+        Download
+    </a>
+</h2>
+
+<dl class="dl-horizontal">
+    <dt>Version</dt>
+    <dd>1.0dev</dd>
+    <dt>Status</dt>
+    <dd><code>done</code></dd>
+    <dt>Seed</dt>
+    <dd>06deb878e7633bf961b2d92dff94acbb</dd>
+    <dt>Audit started on</dt>
+    <dd>2024-03-21 05:56:52 -0400</dd>
+    <dt>Audit finished on</dt>
+    <dd>2024-03-21 05:57:52 -0400</dd>
+    <dt>Runtime</dt>
+    <dd>00:01:00</dd>
+</dl>
+
+<h3>
+    <a
+    id="configuration-general"
+    href="#!/configuration/general"
+    >
+        General
+    </a>
+</h3>
+
+<dl class="dl-horizontal">
+    <dt>URL</dt>
+    <dd>
+        <a href="http://localhost/">
+            http://localhost/
+        </a>
+    </dd>
+
+    
+        <dt>Checks</dt>
+        <dd>
+            <code>*</code>, <code>-passive/*</code>
+        </dd>
+    
+
+    
+        <dt>Plugins</dt>
+        <dd>
+            <dl class="dl-horizontal">
+    
+        <dt>
+            <code>proxy</code>
+        </dt>
+        <dd>
+            <code>{}</code>
+        </dd>
+    
+</dl>
+
+        </dd>
+    
+
+    
+</dl>
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-audit"
+            href="#!/configuration/audit"
+        >
+            Audit
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;parameter_values&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;mode&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;moderate&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_vector_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;include_vector_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;link_templates&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;jsons&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;xmls&quot;</code>
+            </th>
+            <td>
+                
+                    <code>true</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-device"
+            href="#!/configuration/device"
+        >
+            Device
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;visible&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;width&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1600</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;height&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1200</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;user_agent&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;Mozilla/5.0 (Gecko) SCNR::Engine/v1.0dev&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pixel_ratio&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1.0</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;touch&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-dom"
+            href="#!/configuration/dom"
+        >
+            Dom
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;engine&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;chrome&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;local_storage&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;session_storage&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;wait_for_elements&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pool_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;job_timeout&quot;</code>
+            </th>
+            <td>
+                
+                    <code>120</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;worker_time_to_live&quot;</code>
+            </th>
+            <td>
+                
+                    <code>1000</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;wait_for_timers&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-http"
+            href="#!/configuration/http"
+        >
+            Http
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;request_timeout&quot;</code>
+            </th>
+            <td>
+                
+                    <code>20000</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_redirect_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>5</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_concurrency&quot;</code>
+            </th>
+            <td>
+                
+                    <code>10</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_queue_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>50</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;request_headers&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;response_max_size&quot;</code>
+            </th>
+            <td>
+                
+                    <code>500000</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;cookies&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;authentication_type&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;auto&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-input"
+            href="#!/configuration/input"
+        >
+            Input
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;values&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;default_values&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;name&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;scnr_engine_name&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;user&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;scnr_engine_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;usr&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;scnr_engine_user&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;pass&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;5543!%scnr_engine_secret&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;txt&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;scnr_engine_text&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;num&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;132&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;amount&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;100&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;mail&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;scnr_engine@email.gr&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;account&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;12&quot;</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;id&quot;</code>
+            </th>
+            <td>
+                
+                    <code>&quot;1&quot;</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;without_defaults&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;force&quot;</code>
+            </th>
+            <td>
+                
+                    <code>false</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+    <hr/>
+
+    <h3>
+        <a
+            id="configuration-scope"
+            href="#!/configuration/scope"
+        >
+            Scope
+        </a>
+    </h3>
+
+    <table class="table table-condensed">
+    <col width="15%"/>
+
+    
+        <tr>
+            <th>
+                <code>&quot;directory_depth_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>10</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;auto_redundant_paths&quot;</code>
+            </th>
+            <td>
+                
+                    <code>15</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;redundant_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;dom_depth_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>4</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;dom_event_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>500</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;dom_event_inheritance_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>500</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_file_extensions&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[&quot;gif&quot;, &quot;bmp&quot;, &quot;tif&quot;, &quot;tiff&quot;, &quot;jpg&quot;, &quot;jpeg&quot;, &quot;jpe&quot;, &quot;pjpeg&quot;, &quot;png&quot;, &quot;ico&quot;, &quot;psd&quot;, &quot;xcf&quot;, &quot;3dm&quot;, &quot;max&quot;, &quot;svg&quot;, &quot;eps&quot;, &quot;drw&quot;, &quot;ai&quot;, &quot;asf&quot;, &quot;rm&quot;, &quot;mpg&quot;, &quot;mpeg&quot;, &quot;mpe&quot;, &quot;3gp&quot;, &quot;3g2&quot;, &quot;avi&quot;, &quot;flv&quot;, &quot;mov&quot;, &quot;mp4&quot;, &quot;swf&quot;, &quot;vob&quot;, &quot;wmv&quot;, &quot;aif&quot;, &quot;mp3&quot;, &quot;mpa&quot;, &quot;ra&quot;, &quot;wav&quot;, &quot;wma&quot;, &quot;mid&quot;, &quot;m4a&quot;, &quot;ogg&quot;, &quot;flac&quot;, &quot;zip&quot;, &quot;zipx&quot;, &quot;tar&quot;, &quot;gz&quot;, &quot;7z&quot;, &quot;rar&quot;, &quot;bz2&quot;, &quot;bin&quot;, &quot;cue&quot;, &quot;dmg&quot;, &quot;iso&quot;, &quot;mdf&quot;, &quot;vcd&quot;, &quot;raw&quot;, &quot;exe&quot;, &quot;apk&quot;, &quot;app&quot;, &quot;jar&quot;, &quot;pkg&quot;, &quot;deb&quot;, &quot;rpm&quot;, &quot;msi&quot;, &quot;ttf&quot;, &quot;otf&quot;, &quot;woff&quot;, &quot;woff2&quot;, &quot;fon&quot;, &quot;fnt&quot;, &quot;css&quot;, &quot;js&quot;, &quot;pdf&quot;, &quot;docx&quot;, &quot;xlsx&quot;, &quot;pptx&quot;, &quot;odt&quot;, &quot;odp&quot;]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;exclude_content_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;include_path_patterns&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;restrict_paths&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;extend_paths&quot;</code>
+            </th>
+            <td>
+                
+                    <code>[]</code>
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;url_rewrites&quot;</code>
+            </th>
+            <td>
+                
+                    
+                        <code>{}</code>
+                    
+                
+            </td>
+        </tr>
+    
+        <tr>
+            <th>
+                <code>&quot;page_limit&quot;</code>
+            </th>
+            <td>
+                
+                    <code>0</code>
+                
+            </td>
+        </tr>
+    
+</table>
+
+
+
+
+        </div>
+
+        
+
+        
+        <div class="tab-pane" id="plugins">
+            <h2>Plugin results</h2>
+
+<div id="plugin-tabs">
+    <ul class="nav nav-tabs">
+        
+            <li class="active" >
+                <a href="#!/plugins/healthmap">
+                    Health map
+                </a>
+            </li>
+        
+    </ul>
+
+    <div class="tab-content">
+    
+        <div class="tab-pane active"
+             id="plugins-healthmap">
+
+            <div class="plugin-description markdown">
+                <p>Generates a simple list of safe/unsafe URLs.</p>
+
+            </div>
+
+            <div class="plugin-results">
+                            <style type="text/css">
+                a.without_issues {
+                    color: blue;
+                }
+                a.with_issues {
+                    color: red;
+                }
+            </style>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <dl class="dl-horizontal">
+                        <dt>
+                            Total
+                        </dt>
+                        <dd>
+                            122
+                        </dd>
+
+                        <dt>
+                            Without issues
+                        </dt>
+                        <dd>
+                            122
+                        </dd>
+
+                        <dt>
+                            With issues
+                        </dt>
+                        <dd>
+                            0
+                        </dd>
+
+                        <dt>
+                            Issue percentage
+                        </dt>
+                        <dd>
+                            0
+                        </dd>
+                    </dl>
+                </div>
+
+                <div class="col-md-10">
+                    <ul class="list-unstyled">
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/">
+                                http://localhost/
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerabilityDefinitions%0A">
+                                http://localhost/VulnerabilityDefinitions%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp%0A">
+                                http://localhost/VulnerableApp%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A">
+                                http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection%0A">
+                                http://localhost/VulnerableApp/CommandInjection%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_1">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_2">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_3">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_4">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_5">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/CommandInjection/LEVEL_6">
+                                http://localhost/VulnerableApp/CommandInjection/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5">
+                                http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_6">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_7">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_8">
+                                http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_8
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9%0A">
+                                http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal%0A">
+                                http://localhost/VulnerableApp/PathTraversal%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_1">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_10">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_10
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_11">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_11
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_12">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_12
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_2">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_3">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_4">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_5">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_6">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_7">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_8">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_8
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PathTraversal/LEVEL_9">
+                                http://localhost/VulnerableApp/PathTraversal/LEVEL_9
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7%0A">
+                                http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability%0A">
+                                http://localhost/VulnerableApp/SSRFVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_5">
+                                http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability%0A">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_6">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_7">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_8">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_8
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_9">
+                                http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_9
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_1%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_1%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_10%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_10%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_2%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_2%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_3%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_3%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_4%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_4%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_5%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_5%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_6%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_6%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_7%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_7%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_8%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_8%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_9%0A">
+                                http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_9%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute%0A">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_6">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_6
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_7">
+                                http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_7
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection%0A">
+                                http://localhost/VulnerableApp/XSSWithHtmlTagInjection%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1">
+                                http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2">
+                                http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3">
+                                http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XXEVulnerability%0A">
+                                http://localhost/VulnerableApp/XXEVulnerability%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_1%0A">
+                                http://localhost/VulnerableApp/XXEVulnerability/LEVEL_1%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_2%0A">
+                                http://localhost/VulnerableApp/XXEVulnerability/LEVEL_2%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_3%0A">
+                                http://localhost/VulnerableApp/XXEVulnerability/LEVEL_3%0A
+                            </a>
+                        </li>
+                    
+
+                        <li>
+                            <a class="text-success"
+                                href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4">
+                                http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4
+                            </a>
+                        </li>
+                    
+
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    
+    </div>
+
+</div>
+
+        </div>
+        
+
+        <div class="tab-pane" id="sitemap">
+            <h2>
+    <a href="#!/sitemap">
+        Sitemap
+
+        <span class="badge">124</span>
+    </a>
+</h2>
+
+<div id="sitemap">
+
+    <table class="table table-condensed">
+        <tr>
+            <th>HTTP status code</th>
+            <th>URL</th>
+        </tr>
+
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/">
+                        http://localhost/
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerabilityDefinitions%0A">
+                        http://localhost/VulnerabilityDefinitions%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp%0A">
+                        http://localhost/VulnerableApp%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A">
+                        http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1?id=2%0A">
+                        http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1?id=2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2?id=2%0A">
+                        http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2?id=2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3?id=2%0A">
+                        http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3?id=2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection%0A">
+                        http://localhost/VulnerableApp/CommandInjection%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_1?ipaddress=ZcwKhOPLrexxBbto%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_1?ipaddress=ZcwKhOPLrexxBbto%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_2?ipaddress=lmlyBYkdSkxzTRmb%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_2?ipaddress=lmlyBYkdSkxzTRmb%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_3?ipaddress=lmlyBYkdSkxzTRmb%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_3?ipaddress=lmlyBYkdSkxzTRmb%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_4?ipaddress=lmlyBYkdSkxzTRmb%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_4?ipaddress=lmlyBYkdSkxzTRmb%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_5?ipaddress=lmlyBYkdSkxzTRmb%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_5?ipaddress=lmlyBYkdSkxzTRmb%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/CommandInjection/LEVEL_6?ipaddress=lmlyBYkdSkxzTRmb%0A">
+                        http://localhost/VulnerableApp/CommandInjection/LEVEL_6?ipaddress=lmlyBYkdSkxzTRmb%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1?id=3%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1?id=3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2?id=3%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2?id=3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3?id=3%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3?id=3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4?id=3%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4?id=3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5?id=3%0A">
+                        http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5?id=3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_6?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_6?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>302</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_7?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_7?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_8?returnTo=/%0A">
+                        http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_8?returnTo=/%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2?fetch=true%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2?fetch=true%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3?fetch=true%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3?fetch=true%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9?JWT=%0A">
+                        http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9?JWT=%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal%0A">
+                        http://localhost/VulnerableApp/PathTraversal%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_10?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_10?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_11?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_11?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_12?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_12?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_1?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_1?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_2?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_2?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_3?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_3?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_4?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_4?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_5?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_5?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_6?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_6?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_7?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_7?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_8?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_8?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PathTraversal/LEVEL_9?fileName=UserInfo.json%0A">
+                        http://localhost/VulnerableApp/PathTraversal/LEVEL_9?fileName=UserInfo.json%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7?comment=AWvQIRdUANpVKLywQHwweTFi%0A">
+                        http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7?comment=AWvQIRdUANpVKLywQHwweTFi%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_5?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A">
+                        http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_5?fileurl=https://gist.githubusercontent.com/raw/bbf2e2183b8f6252061663ce0ddee79b%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_6?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_6?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_7?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_7?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_8?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_8?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>500</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_9?id=1%0A">
+                        http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_9?id=1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_1%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_10%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_10%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_2%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_3%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_4%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_4%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_5%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_5%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_6%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_6%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_7%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_7%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_8%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_8%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_9%0A">
+                        http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_9%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>400</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_6?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_6?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>400</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_7?src=/VulnerableApp/images/ZAP.png%0A">
+                        http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_7?src=/VulnerableApp/images/ZAP.png%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection%0A">
+                        http://localhost/VulnerableApp/XSSWithHtmlTagInjection%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1?value=axwLEYFIKwGWKfNZ%0A">
+                        http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1?value=axwLEYFIKwGWKfNZ%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2?value=KBoJJCpl%0A">
+                        http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2?value=KBoJJCpl%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>200</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3?value=KBoJJCpl%0A">
+                        http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3?value=KBoJJCpl%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XXEVulnerability%0A">
+                        http://localhost/VulnerableApp/XXEVulnerability%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_1%0A">
+                        http://localhost/VulnerableApp/XXEVulnerability/LEVEL_1%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_2%0A">
+                        http://localhost/VulnerableApp/XXEVulnerability/LEVEL_2%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>404</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_3%0A">
+                        http://localhost/VulnerableApp/XXEVulnerability/LEVEL_3%0A
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <th>405</th>
+                <td>
+                    <a href="http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4">
+                        http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4
+                    </a>
+                </td>
+            </tr>
+        
+    </table>
+
+</div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

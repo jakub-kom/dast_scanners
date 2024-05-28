@@ -1,0 +1,16 @@
+~] Audited 126 page snapshots.
+
+ [~] Duration: 10:16:22
+ [~] Processed 298145/299870 HTTP requests -- failed: 7397
+ [~] -- 8.709 requests/second.
+ [~] Processed 614/614 browser jobs -- failed: 0
+ [~] -- 2.938 second/job.
+
+ [~] Burst avg application time  0.0 seconds
+ [~] Burst average response time 0.001 seconds
+ [~] Burst average responses/s   63.806 responses/second
+
+ [~] Average application time    0.243 seconds
+ [~] Download speed              535.841 KBps
+ [~] Upload speed                0.0 KBps
+ [~] Concurrency                 10/10 connections

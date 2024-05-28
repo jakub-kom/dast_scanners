@@ -1,0 +1,1834 @@
+{
+    "w4af-version": "w4af - Web Advanced Application Attack and Audit Framework\nVersion: pre-alpha release\nRevision: dcc7eb189b - 29 Nov 2023 16:32\nBranch: main\nLocal changes: No\nAuthor: The w4af team.",
+    "scan-info": {
+        "target_urls": [
+            "http://localhost/"
+        ],
+        "target_domain": "localhost",
+        "enabled_plugins": {
+            "audit": [
+                "xss",
+                "format_string",
+                "frontpage",
+                "xpath",
+                "mx_injection",
+                "generic",
+                "htaccess_methods",
+                "phishing_vector",
+                "dav",
+                "ssi",
+                "lfi",
+                "ssl_certificate",
+                "response_splitting",
+                "un_ssl",
+                "ldapi",
+                "buffer_overflow",
+                "global_redirect",
+                "sqli",
+                "csrf",
+                "preg_replace",
+                "eval",
+                "xst",
+                "redos",
+                "blind_sqli",
+                "rfi",
+                "file_upload",
+                "os_commanding"
+            ],
+            "grep": [
+                "blank_body",
+                "dom_xss",
+                "hash_analysis",
+                "click_jacking",
+                "get_emails",
+                "feeds",
+                "strange_parameters",
+                "ssn",
+                "strange_headers",
+                "http_in_body",
+                "svn_users",
+                "lang",
+                "strange_http_codes",
+                "oracle",
+                "credit_cards",
+                "meta_tags",
+                "form_autocomplete",
+                "dot_net_event_validation",
+                "wsdl_greper",
+                "http_auth_detect",
+                "user_defined_regex",
+                "password_profiling",
+                "symfony",
+                "error_pages",
+                "objects",
+                "motw",
+                "code_disclosure",
+                "error_500",
+                "private_ip",
+                "html_comments",
+                "directory_indexing",
+                "path_disclosure",
+                "file_upload",
+                "analyze_cookies",
+                "strange_reason"
+            ],
+            "bruteforce": [
+                "basic_auth",
+                "form_auth"
+            ],
+            "crawl": [
+                "spider_man"
+            ],
+            "evasion": [],
+            "mangle": [],
+            "output": [
+                "xml_file",
+                "text_file",
+                "html_file",
+                "console",
+                "json_file"
+            ],
+            "auth": [],
+            "infrastructure": [
+                "frontpage_version",
+                "allowed_methods",
+                "server_header"
+            ]
+        },
+        "findings": [
+            "The server header for the remote web server is: \"openresty/1.21.4.3\".",
+            "The URL \"http://localhost/\" has the following enabled HTTP methods: *, GET, HEAD",
+            "The URL: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5\" returned an empty body, this could indicate an application error.",
+            "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"ipaddress=1%272%223\" The modified parameter was \"ipaddress\".",
+            "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"...ipaddress=b'ZcwKhOPLrexxBbto\\n'\n/bin/cat /etc/passwd...\" The modified parameter was \"ipaddress\".",
+            "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"ipaddress=1%272%223\" The modified parameter was \"ipaddress\".",
+            "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"ipaddress=%3B%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\".",
+            "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\".",
+            "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"ipaddress=%7C%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\".",
+            "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\".",
+            "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"ipaddress=%7C%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\".",
+            "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\".",
+            "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"ipaddress=%0A%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=mci1m%3Cmci1m\" The modified parameter was \"id\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"id=slind%3Cslind\" The modified parameter was \"id\".",
+            "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"returnTo=%2F%2Fw4af.net\" The modified parameter was \"returnTo\".",
+            "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"returnTo=%2F%2Fw4af.net\" The modified parameter was \"returnTo\".",
+            "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"returnTo=localhost%40w4af.net\" The modified parameter was \"returnTo\".",
+            "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"returnTo=localhost.w4af.net\" The modified parameter was \"returnTo\".",
+            "ReDoS was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"returnTo=%2F%0A\" The modified parameter was \"returnTo\".",
+            "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"returnTo=localhost%40w4af.net\" The modified parameter was \"returnTo\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification.",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "Local File Inclusion was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"fileurl=file%3A%2F%2F%2Fetc%2Fpasswd\" The modified parameter was \"fileurl\".",
+            "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1'\", using HTTP method b'GET'. The injectable parameter is: \"b'id'\". ",
+            "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2'\", using HTTP method b'GET'. The injectable parameter is: \"b'id'\". ",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1\", using HTTP method GET. The sent data was: \"src=\" The modified parameter was \"src\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2\", using HTTP method GET. The sent data was: \"src=\" The modified parameter was \"src\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3\", using HTTP method GET. The sent data was: \"src=y2vks%3Ay2vks\" The modified parameter was \"src\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4\", using HTTP method GET. The sent data was: \"src=sueuv%3Asueuv\" The modified parameter was \"src\".",
+            "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3'\", using HTTP method b'GET'. The injectable parameter is: \"b'src'\". ",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"value=\" The modified parameter was \"value\".",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"value=whgdx%3Cwhgdx\" The modified parameter was \"value\".",
+            "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4'\", using HTTP method b'GET'. The injectable parameter is: \"b'src'\". ",
+            "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"value=\" The modified parameter was \"value\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_1\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_2\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_3\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_4\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_5\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_6\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\".",
+            "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\"."
+        ],
+        "known_urls": [
+            "http://localhost/",
+            "http://localhost/VulnerabilityDefinitions%0A",
+            "http://localhost/VulnerableApp%0A",
+            "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A",
+            "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/CommandInjection%0A",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_1",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_2",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_3",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_4",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_5",
+            "http://localhost/VulnerableApp/CommandInjection/LEVEL_6",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4",
+            "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_6",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_7",
+            "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_8",
+            "http://localhost/VulnerableApp/JWTVulnerability%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_4",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_5",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_6",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_7",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_8",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_9",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10%0A",
+            "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_10",
+            "http://localhost/VulnerableApp/PathTraversal%0A",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_1",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_2",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_3",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_4",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_5",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_6",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_7",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_8",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_9",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_10",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_11",
+            "http://localhost/VulnerableApp/PathTraversal/LEVEL_12",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7%0A",
+            "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7",
+            "http://localhost/VulnerableApp/SSRFVulnerability%0A",
+            "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4",
+            "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_5",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability%0A",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_6",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_7",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_8",
+            "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_9",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_1%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_2%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_3%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_4%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_5%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_6%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_7%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_8%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_9%0A",
+            "http://localhost/VulnerableApp/UnrestrictedFileUpload/LEVEL_10%0A",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute%0A",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_6",
+            "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_7",
+            "http://localhost/VulnerableApp/XSSWithHtmlTagInjection%0A",
+            "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1",
+            "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2",
+            "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3",
+            "http://localhost/VulnerableApp/XXEVulnerability%0A",
+            "http://localhost/VulnerableApp/XXEVulnerability/LEVEL_1%0A",
+            "http://localhost/VulnerableApp/XXEVulnerability/LEVEL_2%0A",
+            "http://localhost/VulnerableApp/XXEVulnerability/LEVEL_3%0A",
+            "http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4"
+        ]
+    },
+    "start": "1710954258",
+    "start-long": "Wed Mar 20 13:04:18 2024",
+    "items": [
+        {
+            "Severity": "Information",
+            "Name": "Server header",
+            "HTTP method": "GET",
+            "URL": "None",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                24
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The server header for the remote web server is: \"openresty/1.21.4.3\". This information was found in the request with id 24."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Strange HTTP response code",
+            "HTTP method": "GET",
+            "URL": "http://localhost/ycoCM",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                237,
+                229,
+                31
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 29,
+            "Description": "The remote web server sent 3 HTTP responses with the uncommon response status code 405 using \"Not Allowed\" as message. The first ten URLs which sent the uncommon status code are:\n - http://localhost/VulnerableApp/\n - http://localhost/VulnerableApp/XXEVulnerability/LEVEL_4\n - http://localhost/ycoCM\n"
+        },
+        {
+            "Severity": "Information",
+            "Name": "Allowed HTTP methods",
+            "HTTP method": "GET",
+            "URL": "http://localhost/",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                25,
+                44,
+                62,
+                68
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 1,
+            "Description": "The URL \"http://localhost/\" has the following enabled HTTP methods: *, GET, HEAD.  This information was found in the requests with ids 25, 44, 62 and 68."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Strange HTTP Reason message",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp%0A",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                128,
+                129,
+                130,
+                131,
+                135,
+                138,
+                140,
+                142,
+                144,
+                146,
+                148,
+                150,
+                152,
+                153,
+                166,
+                167,
+                168,
+                87,
+                91,
+                92,
+                96,
+                97,
+                99,
+                103,
+                104,
+                105,
+                111,
+                112,
+                123,
+                127
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The remote web server sent 30 HTTP responses with the uncommon status message \"\", manual inspection is recommended. The first ten URLs which sent the uncommon message are:\n - http://localhost/VulnerableApp%0A\n - http://localhost/VulnerableApp/BlindSQLInjectionVulnerability%0A\n - http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1\n - http://localhost/VulnerableApp/CommandInjection%0A\n - http://localhost/VulnerableApp/CommandInjection/LEVEL_1\n - http://localhost/VulnerableApp/CommandInjection/LEVEL_2\n - http://localhost/VulnerableApp/CommandInjection/LEVEL_6\n - http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability%0A\n - http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1\n - http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection%0A\n"
+        },
+        {
+            "Severity": "Information",
+            "Name": "Blank http response body",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                217
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The URL: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_5\" returned an empty body, this could indicate an application error. This information was found in the request with id 217."
+        },
+        {
+            "Severity": "High",
+            "Name": "SQL injection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_1",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                995
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 45,
+            "Description": "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"ipaddress=1%272%223\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 995."
+        },
+        {
+            "Severity": "High",
+            "Name": "OS commanding vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_1",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1049
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 36,
+            "Description": "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"...ipaddress=b'ZcwKhOPLrexxBbto\\n'\n/bin/cat /etc/passwd...\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1049."
+        },
+        {
+            "Severity": "High",
+            "Name": "SQL injection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_2",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1259
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 45,
+            "Description": "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"ipaddress=1%272%223\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1259."
+        },
+        {
+            "Severity": "High",
+            "Name": "OS commanding vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_2",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1301
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 36,
+            "Description": "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"ipaddress=%3B%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1301."
+        },
+        {
+            "Severity": "High",
+            "Name": "SQL injection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_3",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1496
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 45,
+            "Description": "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1496."
+        },
+        {
+            "Severity": "High",
+            "Name": "OS commanding vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_3",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1573
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 36,
+            "Description": "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"ipaddress=%7C%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1573."
+        },
+        {
+            "Severity": "High",
+            "Name": "SQL injection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_4",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1781
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 45,
+            "Description": "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1781."
+        },
+        {
+            "Severity": "High",
+            "Name": "OS commanding vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_4",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                1840
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 36,
+            "Description": "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"ipaddress=%7C%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 1840."
+        },
+        {
+            "Severity": "High",
+            "Name": "SQL injection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_5",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                2238
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 45,
+            "Description": "SQL injection in a Unknown database was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"ipaddress=a%27b%22c%27d%22\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 2238."
+        },
+        {
+            "Severity": "High",
+            "Name": "OS commanding vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/CommandInjection/LEVEL_5",
+            "Vulnerable parameter": "ipaddress",
+            "POST data": null,
+            "Vulnerability IDs": [
+                2288
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 36,
+            "Description": "OS Commanding was found at: \"http://localhost/VulnerableApp/CommandInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"ipaddress=%0A%2Fbin%2Fcat%20%2Fetc%2Fpasswd\" The modified parameter was \"ipaddress\". This vulnerability was found in the request with id 2288."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                2578
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the request with id 2578."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                2779
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the request with id 2779."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                3088
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=mci1m%3Cmci1m\" The modified parameter was \"id\". This vulnerability was found in the request with id 3088."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                3308
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"id=slind%3Cslind\" The modified parameter was \"id\". This vulnerability was found in the request with id 3308."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Insecure redirection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                3952
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 50,
+            "Description": "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"returnTo=%2F%2Fw4af.net\" The modified parameter was \"returnTo\". This vulnerability was found in the request with id 3952."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Insecure redirection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                4189
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 50,
+            "Description": "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"returnTo=%2F%2Fw4af.net\" The modified parameter was \"returnTo\". This vulnerability was found in the request with id 4189."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Insecure redirection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                4744
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 50,
+            "Description": "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"returnTo=localhost%40w4af.net\" The modified parameter was \"returnTo\". This vulnerability was found in the request with id 4744."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Insecure redirection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                4786
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 50,
+            "Description": "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_4\", using HTTP method GET. The sent data was: \"returnTo=localhost.w4af.net\" The modified parameter was \"returnTo\". This vulnerability was found in the request with id 4786."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "ReDoS vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                4858,
+                4878,
+                4899,
+                4906
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "ReDoS was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"returnTo=%2F%0A\" The modified parameter was \"returnTo\". This vulnerability was found in the requests with ids 4858, 4878, 4899 and 4906."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Insecure redirection",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5",
+            "Vulnerable parameter": "returnTo",
+            "POST data": null,
+            "Vulnerability IDs": [
+                4950
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 50,
+            "Description": "Global redirect was found at: \"http://localhost/VulnerableApp/Http3xxStatusCodeBasedInjection/LEVEL_5\", using HTTP method GET. The sent data was: \"returnTo=localhost%40w4af.net\" The modified parameter was \"returnTo\". This vulnerability was found in the request with id 4950."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                10207
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the request with id 10207."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5648
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5648."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5651
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5651."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5652
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5652."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5654
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5654."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5693
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5693."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5701
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5701."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5706
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5706."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5708
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5708."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5709
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5709."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5711
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5711."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5712
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5712."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5700
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5700."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5715
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5715."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5716
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5716."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5731
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5731."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5734
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5734."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5737
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5737."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5736
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5736."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5730
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5730."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5744
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5744."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5747
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5747."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5748
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5748."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5746
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5746."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5749
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5749."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5750
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5750."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5754
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5754."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5755
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5755."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5762
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5762."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5756
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5756."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5763
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5763."
+        },
+        {
+            "Severity": "Information",
+            "Name": "Authentication without www-authenticate header",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1",
+            "Vulnerable parameter": null,
+            "POST data": null,
+            "Vulnerability IDs": [
+                5770
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": null,
+            "Description": "The resource: \"http://localhost/VulnerableApp/JWTVulnerability/LEVEL_1\" requires authentication (HTTP Code 401) but the www-authenticate header is not present. This requires human verification. This information was found in the request with id 5770."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                10402
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the request with id 10402."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                10734
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the request with id 10734."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                11012
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the request with id 11012."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Local file inclusion vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1",
+            "Vulnerable parameter": "fileurl",
+            "POST data": null,
+            "Vulnerability IDs": [
+                11924
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 17,
+            "Description": "Local File Inclusion was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"fileurl=file%3A%2F%2F%2Fetc%2Fpasswd\" The modified parameter was \"fileurl\". This vulnerability was found in the request with id 11924."
+        },
+        {
+            "Severity": "High",
+            "Name": "Blind SQL injection vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                13386,
+                13389
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 46,
+            "Description": "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_1'\", using HTTP method b'GET'. The injectable parameter is: \"b'id'\".  This vulnerability was found in the requests with ids 13386 and 13389."
+        },
+        {
+            "Severity": "High",
+            "Name": "Blind SQL injection vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                13725,
+                13737
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 46,
+            "Description": "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_2'\", using HTTP method b'GET'. The injectable parameter is: \"b'id'\".  This vulnerability was found in the requests with ids 13725 and 13737."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                15092
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_1\", using HTTP method GET. The sent data was: \"src=\" The modified parameter was \"src\". This vulnerability was found in the request with id 15092."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                15176
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_2\", using HTTP method GET. The sent data was: \"src=\" The modified parameter was \"src\". This vulnerability was found in the request with id 15176."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                15442
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3\", using HTTP method GET. The sent data was: \"src=y2vks%3Ay2vks\" The modified parameter was \"src\". This vulnerability was found in the request with id 15442."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                15708
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4\", using HTTP method GET. The sent data was: \"src=sueuv%3Asueuv\" The modified parameter was \"src\". This vulnerability was found in the request with id 15708."
+        },
+        {
+            "Severity": "High",
+            "Name": "Blind SQL injection vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                16322,
+                16403
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 46,
+            "Description": "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_3'\", using HTTP method b'GET'. The injectable parameter is: \"b'src'\".  This vulnerability was found in the requests with ids 16322 and 16403."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1",
+            "Vulnerable parameter": "value",
+            "POST data": null,
+            "Vulnerability IDs": [
+                16538
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_1\", using HTTP method GET. The sent data was: \"value=\" The modified parameter was \"value\". This vulnerability was found in the request with id 16538."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2",
+            "Vulnerable parameter": "value",
+            "POST data": null,
+            "Vulnerability IDs": [
+                16724
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_2\", using HTTP method GET. The sent data was: \"value=whgdx%3Cwhgdx\" The modified parameter was \"value\". This vulnerability was found in the request with id 16724."
+        },
+        {
+            "Severity": "High",
+            "Name": "Blind SQL injection vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4",
+            "Vulnerable parameter": "src",
+            "POST data": null,
+            "Vulnerability IDs": [
+                16787,
+                16832
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 46,
+            "Description": "Blind SQL injection was found at: \"b'http://localhost/VulnerableApp/XSSInImgTagAttribute/LEVEL_4'\", using HTTP method b'GET'. The injectable parameter is: \"b'src'\".  This vulnerability was found in the requests with ids 16787 and 16832."
+        },
+        {
+            "Severity": "Medium",
+            "Name": "Cross site scripting vulnerability",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3",
+            "Vulnerable parameter": "value",
+            "POST data": null,
+            "Vulnerability IDs": [
+                16883
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 55,
+            "Description": "A Cross Site Scripting vulnerability was found at: \"http://localhost/VulnerableApp/XSSWithHtmlTagInjection/LEVEL_3\", using HTTP method GET. The sent data was: \"value=\" The modified parameter was \"value\". This vulnerability was found in the request with id 16883."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                234,
+                287,
+                293
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_1\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 234, 287 and 293."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                247,
+                418,
+                427
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 247, 418 and 427."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                359,
+                647,
+                652
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/BlindSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 359, 647 and 652."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                3327,
+                3613,
+                3616
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/ErrorBasedSQLInjectionVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 3327, 3613 and 3616."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_1",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                7988,
+                8046,
+                8095
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_1\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 7988, 8046 and 8095."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_2",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                8103,
+                8303,
+                8340
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_2\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 8103, 8303 and 8340."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_3",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                8270,
+                8488,
+                8505
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_3\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 8270, 8488 and 8505."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_4",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                8517,
+                8731,
+                8762
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_4\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 8517, 8731 and 8762."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_5",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                8721,
+                8935,
+                8963
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_5\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 8721, 8935 and 8963."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PathTraversal/LEVEL_6",
+            "Vulnerable parameter": "fileName",
+            "POST data": null,
+            "Vulnerability IDs": [
+                8914,
+                9148,
+                9174
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PathTraversal/LEVEL_6\", using HTTP method GET. The sent data was: \"fileName=\" The modified parameter was \"fileName\". This vulnerability was found in the requests with ids 8914, 9148 and 9174."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                11295,
+                11359,
+                11360
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_6\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the requests with ids 11295, 11359 to 11360."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7",
+            "Vulnerable parameter": "comment",
+            "POST data": null,
+            "Vulnerability IDs": [
+                11547,
+                11734,
+                11735
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/PersistentXSSInHTMLTagVulnerability/LEVEL_7\", using HTTP method GET. The sent data was: \"comment=\" The modified parameter was \"comment\". This vulnerability was found in the requests with ids 11547, 11734 to 11735."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2",
+            "Vulnerable parameter": "fileurl",
+            "POST data": null,
+            "Vulnerability IDs": [
+                11895,
+                12210,
+                12211
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_2\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\". This vulnerability was found in the requests with ids 11895, 12210 to 12211."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3",
+            "Vulnerable parameter": "fileurl",
+            "POST data": null,
+            "Vulnerability IDs": [
+                12136,
+                12465,
+                12468
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\". This vulnerability was found in the requests with ids 12136, 12465 and 12468."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4",
+            "Vulnerable parameter": "fileurl",
+            "POST data": null,
+            "Vulnerability IDs": [
+                12414,
+                12687,
+                12688
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/SSRFVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"fileurl=\" The modified parameter was \"fileurl\". This vulnerability was found in the requests with ids 12414, 12687 to 12688."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                13295,
+                13535,
+                13551
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_3\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 13295, 13535 and 13551."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                13525,
+                13800,
+                13802
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_4\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 13525, 13800 and 13802."
+        },
+        {
+            "Severity": "Low",
+            "Name": "Unhandled error in web application",
+            "HTTP method": "GET",
+            "URL": "http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5",
+            "Vulnerable parameter": "id",
+            "POST data": null,
+            "Vulnerability IDs": [
+                13749,
+                14003,
+                14010
+            ],
+            "CWE IDs": [],
+            "WASC IDs": [],
+            "Tags": [],
+            "VulnDB ID": 73,
+            "Description": "An unhandled error, which could potentially translate to a vulnerability, was found at: \"http://localhost/VulnerableApp/UnionBasedSQLInjectionVulnerability/LEVEL_5\", using HTTP method GET. The sent data was: \"id=\" The modified parameter was \"id\". This vulnerability was found in the requests with ids 13749, 14003 and 14010."
+        }
+    ]
+}
